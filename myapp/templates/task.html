@@ -1,0 +1,19 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'task_style.css' %}" type="text/css" media="screen">
+    <title>Task</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Hello!</h1>
+        <p>My name is {{data.name}}.<br>
+        I am {{data.age}} years old.<br>
+        I am currently working as a {{data.role}} intern at {{data.company}}</p>
+    </div>
+</body>
+</html>
