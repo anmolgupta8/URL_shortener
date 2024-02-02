@@ -43,7 +43,7 @@ def redirect_url(request,short_url):
     # print(shorturl)
     row = LongToShort.objects.filter(short_url = short_url)
     if(len(row) == 0):
-        return HttpResponse("There is no such row")
+        return render(request,'404.html')
     obj = row[0]
     long_url = obj.long_url
     obj.clicks = obj.clicks+1
