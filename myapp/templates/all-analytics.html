@@ -12,13 +12,14 @@
 	<link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" media="screen">
 </head>
 
-<body class="pace-done lout_stats30">
+<body class="pace-done lout_stats30 analictics-back">
 	<main id="content" role="main" class="wyniki wyniki_all">
 		<div class="container">
 			<div class="row">
 				<div class="col-12 page_log_in mt-0">
 					<h2 class="h1" style="text-align: center;">All Links Analytics</h2>
 				</div>
+				<div>
 				{% for obj in rows %}
 					<div class="url_options url_stats_o" id="1">
 						<p class="data_link">{{ obj.date }}</p>
@@ -30,10 +31,12 @@
 								{{ obj.short_url }}</a>
 						</p>
 						<div class="stats_total btn-cutt click_stats btn_norm">
-							<div>Total clicks <strong class="allClicks">{{ obj.clicks }}</strong></div>
+							<div class="click_design">Total clicks <strong class="allClicks">{{ obj.clicks }}</strong></div>
 						</div>
 					</div>
-				{% endfor %}
+					<hr/>
+					{% endfor %}
+				</div>
 			</div>
 		</div>
 	</main>
